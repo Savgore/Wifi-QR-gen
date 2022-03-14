@@ -37,7 +37,7 @@ window = tkinter.Canvas(window,width = 450, height = 450)
 #Frame for introduction to service
 introframe = LabelFrame(window)
 introframe.pack(padx=10, pady=10)
-intro = tkinter.Label(introframe, text="Welcome to the Wifi QR Keyring and Generator - You are currently looking at the QR for {}".format(SSIDinfo))
+intro = tkinter.Label(introframe, text="Welcome. Current network is {} - the password is {}".format(SSIDinfo,Wifipass))
 intro.pack()
 
 #QR display Frame
@@ -46,15 +46,9 @@ QRdisplayframe.pack(padx=100, pady=30)
 image = tkinter.PhotoImage(file = '{} QR Code.png'.format(SSIDinfo))
 QRImage = tkinter.Label(QRdisplayframe, image= image).pack(side = tkinter.LEFT, padx=10, pady=10)
 
-
-
-
-
 window.pack()
 
 #Additional Features
-
-
 
 #Keeping the GUI running
 window.mainloop()
